@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ótima Escolha!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            background-color: #f8bbd0; /* Fundo rosa claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #D32F2F; /* Cor vermelha */
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: textFlicker 2s infinite;
+        }
+
+        /* Animação do texto "Ótima escolha!" */
+        @keyframes textFlicker {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Animação dos corações */
+        .corao {
+            font-size: 30px;
+            position: absolute;
+            animation: subirCoracao 1.5s ease-in-out infinite;
+        }
+
+        /* Subir corações */
+        @keyframes subirCoracao {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px);
+                opacity: 0;
+            }
+        }
+
+        /* Adicionando fogos de artifício */
+        .fogos {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fogosAnim 3s ease-in-out infinite;
+        }
+
+        @keyframes fogosAnim {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        .firework {
+            position: absolute;
+            background-color: rgba(255, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            animation: explode 0.5s ease-in-out infinite;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ÓTIMA ESCOLHA! ❤️</h1>
+        <!-- Corpos dos corações -->
+        <div class="corao" style="left: 20%; animation-duration: 3s; animation-delay: 0s;">❤️</div>
+        <div class="corao" style="left: 40%; animation-duration: 3s; animation-delay: 1s;">❤️</div>
+        <div class="corao" style="left: 60%; animation-duration: 3s; animation-delay: 1.5s;">❤️</div>
+        <div class="corao" style="left: 80%; animation-duration: 3s; animation-delay: 2s;">❤️</div>
+        <!-- Fogos de artifício -->
+        <div class="fogos">
+            <div class="firework" style="left: 50%; animation-duration: 1.5s;"></div>
+            <div class="firework" style="left: 40%; animation-duration: 1s;"></div>
+            <div class="firework" style="left: 60%; animation-duration: 2s;"></div>
+        </div>
+    </div>
+</body>
+</html>
